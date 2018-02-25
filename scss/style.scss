@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700');
+
+@font-face {
+    font-family: 'aleo regular';
+    src: url('../fonts/aleo-regular-webfont.eot');
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-regular-webfont.woff') format('woff'),
+         url('../fonts/aleo-regular-webfont.svg') format('svg'),
+         url('../fonts/aleo-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$color-text: #e8e8e8;
+$color-blue: #5474fd;
+$color-blueh: #3259fc;
+
+@import "_normalize";
+@import "_mixins";
+@import "_pe-icon-7-stroke";
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #fff;
+	font: 400 16px/1.6 'Josefin Sans', sans-serif;
+	color:#fff;
+
+
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+	transition: all .25s;
+	
+}
+
+.container {
+	min-width: 1024px;
+	max-width: 1110px;
+	padding-left: 20px;
+  	padding-right: 20px;
+	
+	margin: 0 auto;
+	/* position: relative; */
+}
+.first {
+	height: 100vh;
+	position: relative;
+	.bg-first {	
+	@include background-image('../img/bg1.jpg');
+	background-size: cover;
+	padding-top: 200px;
+	// padding-bottom: 13%;	
+	color: #fff;
+	text-align: center;
+	height: 100%;
+	.title-main {
+		margin: 0;
+		padding: 0;
+		font-size: 48px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		line-height: 1;
+		text-transform: uppercase;
+		}
+	.subtitle-main {
+		font-size: 22px;
+		font-weight: 300;
+		letter-spacing: 5px;
+		padding-bottom: 50px;
+		}
+	.form-search {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 120px;
+		.search, .btn-search {
+		height: 60px;
+		border: 2px solid #fff;
+		}
+		.search {
+		width: 500px;		
+		color: #999;
+		text-align: center;
+		padding: 0 15px;
+		}
+		.btn-search {
+		width: 150px;
+		background-color: $color-blue;
+		font-family: 'aleo regular';
+		font-size: 16px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 0 15px;
+		&:hover,
+		&:focus {
+			background-color: $color-blueh;
+		}
+		.icon_search {
+			margin-left: 4px;
+			display: inline-block;
+			vertical-align: middle;
+			}
+		}
+	}
+	.scroll {
+		font-size: 14px;
+		color: #fff;
+		text-decoration: none;
+		letter-spacing: 2px;
+		display: inline-block;
+		&:hover,
+		&:focus {
+			transform: translateY(5px);
+		}
+		span {
+			display: block;
+			padding-bottom: 15px;
+		}
+		.scroll-arrow {		
+			transform: rotate(-90deg);
+		}
+
+	}
+	}
+
+	.header {
+		background-color: $color-blue;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		.header-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+		.logo {
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			display: inline-block;
+			line-height: 1;
+
+		}
+		.menu {
+			margin: 0;
+			padding: 0;
+			
+		& li {
+			display: inline-block;
+			
+			& a {
+				font-size: 14px;
+				font-family: 'aleo regular';
+				margin-left: 60px;
+				border: 1px solid transparent;
+				&:hover,
+				&:focus {
+					border-bottom: 1px solid $color-text;
+					color: $color-text;
+				}
+			}
+		}
+		}
+	}
+	}
+	
+}
+
+.btn {
+	display: inline-block;
+	height: 60px;
+	padding: 0 40px;
+	line-height: 60px;	
+	background-color: $color-blue;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'aleo regular';
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin: 20px 0;
+	&:hover,
+	&:focus {
+			background-color: $color-blueh;
+		}
+}
+
+.flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+.choose {
+	@include background-image('../img/bg2.jpg');
+	padding: 110px 0;
+	
+	.block-article {
+		flex-basis: 48%;
+
+	.title {
+		font-family: 'aleo regular';
+		font-size: 36px;
+		color: #fff;
+		padding-left: 30px;
+		padding: 0;
+		letter-spacing: 2px;
+	}
+	.text {
+		letter-spacing: 1px;
+		color: $color-text;
+		padding: 20px 0;
+	}	
+	}
+	.block-img {
+		flex-basis: 48%;
+		text-align: right;
+		img:nth-child(odd) {
+			margin-right: 20%;
+		}
+	}
+}
+
