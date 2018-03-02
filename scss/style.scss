@@ -18,6 +18,8 @@ $color-blueh: #3259fc;
 @import "_normalize";
 @import "_mixins";
 @import "_pe-icon-7-stroke";
+@import "_font-awesome.min";
+
 
 
 html {
@@ -53,7 +55,7 @@ body {
 	.bg-first {	
 	@include background-image('../img/bg1.jpg');
 	background-size: cover;
-	padding-top: 200px;
+	padding-top: 30vh;
 	// padding-bottom: 13%;	
 	color: #fff;
 	text-align: center;
@@ -76,7 +78,7 @@ body {
 	.form-search {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 120px;
+		margin-bottom: 15vh;
 		.search, .btn-search {
 		height: 60px;
 		border: 2px solid #fff;
@@ -154,6 +156,7 @@ body {
 		.menu {
 			margin: 0;
 			padding: 0;
+			text-transform: uppercase;
 			
 		& li {
 			display: inline-block;
@@ -181,6 +184,8 @@ body {
 	height: 60px;
 	padding: 0 40px;
 	line-height: 60px;	
+	/* background-color: $color-blue; */
+	background-image: linear-gradient(60deg, #496bfe 35%, $color-blue 36%, $color-blue);
 	background-color: $color-blue;
 	color: #fff;
 	text-decoration: none;
@@ -191,6 +196,7 @@ body {
 	margin: 20px 0;
 	&:hover,
 	&:focus {
+			background-image: none;
 			background-color: $color-blueh;
 		}
 }
@@ -200,33 +206,214 @@ body {
 		justify-content: space-between;
 	}
 
+.title {
+		font-family: 'aleo regular';
+		font-size: 36px;
+		color: #fff;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 2px;
+	}
+.title-min {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+
 .choose {
 	@include background-image('../img/bg2.jpg');
 	padding: 110px 0;
 	
 	.block-article {
 		flex-basis: 48%;
-
 	.title {
-		font-family: 'aleo regular';
-		font-size: 36px;
-		color: #fff;
 		padding-left: 30px;
-		padding: 0;
-		letter-spacing: 2px;
 	}
-	.text {
-		letter-spacing: 1px;
-		color: $color-text;
-		padding: 20px 0;
-	}	
+	
+	
 	}
 	.block-img {
 		flex-basis: 48%;
 		text-align: right;
+		img {
+			height: 220px;
+				
+		}
 		img:nth-child(odd) {
 			margin-right: 20%;
 		}
 	}
 }
+
+.text {
+		color: $color-text;
+		padding: 20px 0;
+	}	
+
+.steps {
+	background: url(../img/duga.svg) center 50px no-repeat #333;
+
+	height: 330px;
+	text-align: center;
+	padding: 130px 0 100px;
+	font-size: 36px;
+	font-family: 'aleo regular';
+	.flex {
+		
+		/* justify-content: space-around; */
+	}
+	.step {
+		padding-top: 20px;
+		margin-top: -20px;
+	}
+	.step-bg {
+		background-color: #333;
+		margin-left: 15px;
+
+	}
+	
+}
+
+.country-left {
+	@include background-image('../img/bg3.jpg');
+	background-size: cover;
+}
+
+.country-right {
+	@include background-image('../img/bg4.jpg');
+	background-size: cover;
+	.flex {
+		justify-content: flex-end;
+	}
+	
+}
+
+.country {
+	padding: 230px 0 100px;
+	.block-article {
+		flex-basis: 50%;
+		background-color: rgba(0,0,0, .9);
+		padding: 50px 30px;
+
+		.subtitle, .title {
+			font-size: 20px;
+		}
+		.subtitle {
+			color: $color-text;
+		}
+		.title-min {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		.text {
+			padding: 0 0 15px;
+
+		}
+		.btn {
+			padding: 0 60px;
+		}
+	}
+}
+
+.reviews {
+	@include background-image('../img/bg5.jpg');
+	background-size: cover;
+	padding: 110px 0;
+	text-align: center;
+	.title {
+		margin-bottom: 100px;
+	}
+	.slider-item {
+		display: flex;
+		height: 285px;
+		overflow: hidden;
+		.slider-img {
+			width: 450px; 			
+			& img {
+				height: 100%;
+				
+			}
+		}
+		.slider-text {
+					
+			padding: 40px;
+			background-color: #333;
+			text-align: left;
+			.text {
+				padding: 10px 0 0;
+				font-weight: 300;
+				position: relative;
+				height: 175px;
+				overflow: hidden;
+				i {
+					position: absolute;
+					top: 15px;
+					left: 0;
+					color: $color-blue;
+				}
+				p:first-of-type {
+					text-indent: 20px;
+				}
+			}
+		}
+
+	}
+	.slider-arrow {
+			text-align: right;
+			margin-top: 30px;
+			.arrow-prev, .arrow-next {
+				display: inline-block;
+				width: 80px;
+				height: 50px;
+				border: 1px solid #fff;
+				text-align: center;
+				padding-top: 16px;
+				&:hover,
+				&:focus {
+					background-color: $color-blue;					
+				}
+				
+			}
+			.arrow-prev {
+				margin-right: 10px;
+			}
+
+			.arrow-right {
+				transform: rotate(180deg);
+
+			}
+		}
+
+}
+
+.footer {
+	text-align: center;
+	background-color: #232323;
+	padding: 100px 0 50px;
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+	.logo {
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	ul {
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-right: 18px;
+
+			&:hover a,
+			&:focus a {
+				color: $color-blue;					
+			}
+		}
+		li:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 
