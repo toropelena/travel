@@ -55,6 +55,7 @@ body {
 	.bg-first {	
 	@include background-image('../img/bg1.jpg');
 	background-size: cover;
+	background-color: $color-blue;
 	padding-top: 30vh;
 	// padding-bottom: 13%;	
 	color: #fff;
